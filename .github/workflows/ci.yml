@@ -1,6 +1,8 @@
 name: CI Pipeline
 
 on:
+  push:
+
   pull_request:
     branches:
       - main
@@ -23,3 +25,7 @@ jobs:
       # Step 3: Install dependencies
       - name: Install dependencies
         run: npm install
+
+    # Step 4: Build the project
+      - name: Build project
+        run: npm run build
